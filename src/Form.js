@@ -8,7 +8,7 @@ function Form(props) {
     email: "",
     role: "",
   });
-  
+
   const changeHandler = (event) => {
     setMember({
       ...member,
@@ -26,8 +26,6 @@ function Form(props) {
           setMember({ id: Date.now(), name: "", email: "", role: "" });
         }}
       >
-        
-        
         <label htmlFor="name">Name:</label>
         <input
           id="name"
