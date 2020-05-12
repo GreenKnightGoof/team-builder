@@ -2,9 +2,19 @@ import React, { useState } from "react";
 import "./Form.css";
 
 function Form(props) {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [role, setRole] = useState("");
+  const [member, setMember] = useState({
+    id: Date.now(),
+    name: "",
+    email: "",
+    role: "",
+  });
+  
+  const changeHandler = (event) => {
+    setMember({
+      ...member,
+      [event.target.name]: event.target.value,
+    });
+  };
 
   return (
     <div className="form-container">
@@ -12,18 +22,20 @@ function Form(props) {
         className="form"
         onSubmit={(event) => {
           event.preventDefault();
+          props.addMember(member);
+          setMember({ id: Date.now(), name: "", email: "", role: "" });
         }}
       >
+        
+        
         <label htmlFor="name">Name:</label>
         <input
           id="name"
           type="text"
           name="name"
           placeholder="Please Enter Your Name:"
-          value={name}
-          onChange={(event) => {
-            setName(event.target.value);
-          }}
+          value={member.name}
+          onChange={changeHandler}
         ></input>
         <label htmlFor="email">Email:</label>
         <input
@@ -31,10 +43,8 @@ function Form(props) {
           type="text"
           name="email"
           placeholder="Please Enter Your Email:"
-          value={email}
-          onChange={(event) => {
-            setEmail(event.target.value);
-          }}
+          value={member.email}
+          onChange={changeHandler}
         ></input>
         <label htmlFor="role">Role:</label>
         <input
@@ -42,10 +52,8 @@ function Form(props) {
           type="text"
           name="role"
           placeholder="Please Enter Your Role:"
-          value={role}
-          onChange={(event) => {
-            setRole(event.target.value);
-          }}
+          value={member.role}
+          onChange={changeHandler}
         ></input>
         <button type="submit">Click to Submit!</button>
       </form>

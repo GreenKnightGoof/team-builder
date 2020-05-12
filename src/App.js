@@ -1,35 +1,26 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Form from './Form'
+import MemberList from './MemberList'
 
-function App() {
-  const [member, setMember] = useState([{
+function App(props) {
+  const [members, setMembers] = useState([{
+    id: Date.now(),
     name: "",
     email: "", 
     role: ""
   }]);
 
-console.log(member)
-console.log(setMember)
+
+  const addMember = (newMember) => {
+    setMembers([...members, newMember])
+  }
 
   return (
     <div className="App">
-      <Form />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>My Lambda Team!</h1>
+      <MemberList members={members}/>
+      <Form addMember={addMember}/>
     </div>
   );
 }
