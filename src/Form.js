@@ -22,7 +22,7 @@ function Form(props) {
         className="form"
         onSubmit={(event) => {
           event.preventDefault();
-          props.addMember(member);
+          props.onAdd(member);
           setMember({ id: Date.now(), name: "", email: "", role: "" });
         }}
       >
@@ -33,7 +33,9 @@ function Form(props) {
           name="name"
           placeholder="Please Enter Your Name:"
           value={member.name}
-          onChange={changeHandler}
+          onChange={(event) => {
+            setMember({...member, name: event.target.name})
+          }}
         ></input>
         <label htmlFor="email">Email:</label>
         <input
