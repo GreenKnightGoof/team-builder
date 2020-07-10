@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./Form.css";
+import ReactDom from 'react-dom';
+import { Button } from "@material-ui/core";
 
 function Form(props) {
   const [member, setMember] = useState({
@@ -33,9 +35,7 @@ function Form(props) {
           name="name"
           placeholder="Please Enter Your Name:"
           value={member.name}
-          onChange={(event) => {
-            setMember({...member, name: event.target.name})
-          }}
+          onChange={changeHandler}
         ></input>
         <label htmlFor="email">Email:</label>
         <input
@@ -55,7 +55,9 @@ function Form(props) {
           value={member.role}
           onChange={changeHandler}
         ></input>
-        <button type="submit">Click to Submit!</button>
+        <Button className="button" color="primary" type="submit">
+          Click to Submit!
+        </Button>
       </form>
     </div>
   );

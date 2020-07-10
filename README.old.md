@@ -1,6 +1,6 @@
 # Module Project: Forms - Team Builder
 
-Term 1 is installing, term 2 is for commits etc.
+
 
 This project allows you to practice the concepts and techniques learned in this module and apply them in a concrete project. This module explored Form management in React. You learned about controled inputs, semantic HTML, some ES6 tools like the spread operator and computer properties, and synthetic events. In your project you will demonstrate proficiency of these subjects and principles by creating an application using each of these.
 
@@ -37,23 +37,23 @@ Follow these steps for completing your project.
 
 ## Minimum Viable Product
 
-- [ ] Render a list of team members from state
-- [ ] Build a form to add a new member to the list of members
+- [ x] Render a list of team members from state
+- [ x] Build a form to add a new member to the list of members
 
 ### STEP 1 - Setup your state
 
-- [ ] Import the `useState` hook and set up a state property for your team members list
+- [ x] Import the `useState` hook and set up a state property for your team members list
 
-- [ ] Give the state variable you just declared a default value. You will need to keep track of a list of team members and each team member will have several key/value pairs associated with them.
+- [ x] Give the state variable you just declared a default value. You will need to keep track of a list of team members and each team member will have several key/value pairs associated with them.
 
-- [ ] Render your list of team members
+- [ x] Render your list of team members
 
 ### STEP 2 - Build your form
 
-- [ ] In `Form.js` build out your markup
-- [ ] Build inputs for `name`, `email` and `role` (backend engineer, frontend engineer, designer, etc. Use your imagination)
-- [ ] Import the useState hook and utilize what we learned about two-way data binding
-- [ ] Render your `Form` component in `App` and pass a setter method (the `set_____` method from your team members state in `App`) down to it so you can add team members to your state.
+- [ x] In `Form.js` build out your markup
+- [ x] Build inputs for `name`, `email` and `role` (backend engineer, frontend engineer, designer, etc. Use your imagination)
+- [ x] Import the useState hook and utilize what we learned about two-way data binding
+- [ x] Render your `Form` component in `App` and pass a setter method (the `set_____` method from your team members state in `App`) down to it so you can add team members to your state.
 
 Now you are finished with MVP! Move on to the stretch goals at the bottom. The first is to add the functionality to edit members. As this is a very complicated process, steps have been included here to help you through that.
 
