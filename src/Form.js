@@ -33,9 +33,7 @@ function Form(props) {
           name="name"
           placeholder="Please Enter Your Name:"
           value={member.name}
-          onChange={(event) => {
-            setMember({...member, name: event.target.name})
-          }}
+          onChange={changeHandler}
         ></input>
         <label htmlFor="email">Email:</label>
         <input
