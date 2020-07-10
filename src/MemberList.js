@@ -1,4 +1,5 @@
 import React from "react";
+import "./MemberList.css"
 
 const MemberList = (props) => {
 

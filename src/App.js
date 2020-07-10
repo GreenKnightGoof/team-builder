@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./App.css";
 import Form from "./Form";
 import MemberList from "./MemberList";
+import 'fontsource-roboto';
+import MemberListTest from "./MemberListTest"
 
 function App(props) {
   const [members, setMembers] = useState([
@@ -37,9 +39,11 @@ function App(props) {
 
   return (
     <div className="App">
-      <h1>My Lambda Team!</h1>
-      <MemberList members={members} />
+      <h1 className='title'>My Lambda Team!</h1>
+      {/* <MemberList members={members} /> */}
+      <MemberListTest members={members}/>
       <Form onAdd={addMember} />
+      
     </div>
   );
 }
