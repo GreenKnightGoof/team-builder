@@ -7,26 +7,26 @@ function App(props) {
   const [members, setMembers] = useState([
     {
       id: Date.now() + 1,
-      name: "Kyle N",
+      name: "Kyle Nelson",
       email: "kyle@developer.com",
       role: "Web Developer",
     },
     {
       id: Date.now() + 3,
-      name: "Valerie V",
-      email: "valerie@developer.com",
+      name: "Naomi Priest",
+      email: "naomi@developer.com",
       role: "Web Developer",
     },
     {
       id: Date.now() + 5,
-      name: "William S",
-      email: "william@developer.com",
+      name: "Brandon Harris",
+      email: "brandon@developer.com",
       role: "Web Developer",
     },
     {
       id: Date.now() + 7,
-      name: "Annemarie A",
-      email: "annemarie@developer.com",
+      name: "Jojo Zhang",
+      email: "jojo@developer.com",
       role: "Web Developer",
     },
   ]);
@@ -38,7 +38,7 @@ function App(props) {
   return (
     <div className="App">
       <h1>My Lambda Team!</h1>
-      <MemberList team={members} />
+      <MemberList members={members} />
       <Form onAdd={addMember} />
     </div>
   );

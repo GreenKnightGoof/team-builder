@@ -6,10 +6,10 @@ const MemberList = (props) => {
     <div className="member-list">
       {props.members.map((member) => (
         <div className="member" key={member.id}>
-          <h2>{member.name}</h2>
-          <p>{member.email}</p>
-          <p>{member.role}</p>
-          <p>{member.id}</p>
+          <h2>Member Name: {member.name}</h2>
+          <p>Email: {member.email}</p>
+          <p>Role: {member.role}</p>
+          <p>ID Number: {member.id}</p>
         </div>
       ))}
     </div>
